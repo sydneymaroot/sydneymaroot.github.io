@@ -1,0 +1,408 @@
+/* =====================
+   RESET
+   ===================== */
+
+/* My edited version of the Eric Meyer’s reset tool. 
+   You may want to include this in all of your future CSS files. */
+
+html,
+body,
+div,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+
+/* =====================
+   GLOBAL / BASE
+   ===================== */
+
+/* >>> IMPORTANT: you have to change the wrap of the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class. And you need a div with the class container and all the other pages.  */
+
+body {
+	font-family: sans-serif;
+	background-color: #cca07c;
+}
+
+main {
+	padding: 3em 3em 2em;
+}
+
+img {
+	width: 100%;
+	/*Please leave this line.*/
+	display: block;
+	margin-bottom: 3em;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+figure {
+	margin-bottom: 0em;
+}
+
+
+/* =====================
+   LAYOUT CONTAINERS
+   ===================== */
+
+div.home-container {
+	background: url("server\ with\ coffee\ cup.jpeg") center center / cover no-repeat fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	max-width: 70em;
+	margin: auto;
+}
+
+div.home-container header a img {
+	max-width: 40em;
+}
+
+div.container {
+	position: relative;
+	min-height: 100vh;
+	background-color: #FFFFFF;
+	max-width: 70em;
+	margin: auto;
+}
+
+div.container header a img {
+	max-width: 14em;
+}
+
+
+/* =====================
+   HEADER & NAVIGATION
+   ===================== */
+
+header {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	column-gap: 2.2em;
+	background: #cca07c;
+	padding: 0.0em 0.4em;
+	align-items: center;
+}
+
+nav {
+	font-size: 1.5em;
+}
+
+nav ul {
+	margin-top: 0.5em;
+	text-align: right;
+	display: flex;
+	gap: 0;
+	flex-direction: column;
+}
+
+nav ul li {
+	text-transform: uppercase;
+	font-family: helvetica-neue-lt-pro, sans-serif;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+nav ul li a {
+	color: #000000;
+	padding: 0.7em 1em;
+}
+
+nav ul li.selected a {
+	color: #FFFFFF;
+	padding: 0.7em;
+	transition: background-color 0.2em ease, color 0.2em ease;
+}
+
+nav ul li a:hover,
+nav ul li.selected a:hover {
+	background-color: #644e3b;
+	color: #ffffff;
+}
+
+
+/* =====================
+   TYPOGRAPHY
+   ===================== */
+
+h1 {
+	text-align: center;
+	font-family: "alphabet-soup-pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.3em;
+	margin-bottom: 0.5em;
+}
+
+h2,
+h3,
+h4 {
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2.3em;
+	margin: 1.1em 0 1.1em;
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	font-weight: 700;
+	font-style: bold;
+	text-transform: uppercase;
+	color: #644e3b;
+}
+
+h3 {
+	font-size: 1.8em;
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	text-transform: uppercase;
+	margin: 1.1em 0 1.1em;
+}
+
+p {
+	margin: 1.0em 0em 1.2em;
+}
+
+p.description {
+	grid-column: 1 / 3;
+	margin: 0em;
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+p.price {
+	grid-row: 1;
+	grid-column: 2;
+	color: #644e3b;
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+
+p.hours {
+	color: #cca07c;
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	font-weight: bold;
+}
+
+p.slogan {
+	font-size: 5em;
+	font-family: serif;
+	font-style: italic;
+	margin: 0em 0em 0.5em;
+	color: #FFFFFF;
+}
+
+.about-text p {
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	font-weight: 400;
+	/* try 300, 400, 500 */
+	font-size: 1.05em;
+	line-height: 1.6;
+	color: #644e3b;
+	margin-bottom: 3em;
+}
+
+
+/* =====================
+   HOME ADDRESS OVERLAY
+   ===================== */
+
+.home-address {
+	position: absolute;
+	bottom: 1.5em;
+	left: 1.5em;
+
+	color: #ffffff;
+	font-style: normal;
+	font-weight: bold;
+
+	background: rgba(0, 0, 0, 0.35);
+	padding: 0.4em 0.6em;
+}
+
+
+/* =====================
+   MENU PAGE
+   ===================== */
+
+main.menu ul {
+	margin: 2em;
+}
+
+main.menu ul li {
+	margin: 2em 1em 3em;
+	padding: 1.2em 1.5em;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto auto;
+
+	background-color: #E6D5C2;
+	border: 0.12em solid #000;
+	border-radius: 0.8em;
+	box-shadow: 0 0.15em 0 rgba(0, 0, 0, 0.35);
+}
+
+main.menu ul li h2 {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+main.menu ul li .price {
+	grid-column: 2;
+	grid-row: 1;
+	text-align: right;
+	align-self: center;
+}
+
+main.menu ul li .description {
+	grid-column: 1 / 3;
+	grid-row: 2;
+}
+
+main.menu h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+main.menu ul li:hover {
+	transform: translateY(-0.1em);
+	transition: transform 0.2s ease;
+}
+
+
+/* =====================
+   FOOTER & ADDRESS
+   ===================== */
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 3rem;
+	box-sizing: border-box;
+	padding: .9em 1em 0em;
+	background: #cca07c;
+}
+
+footer p {
+	margin: 0;
+}
+
+address {
+	color: #cca07c;
+	font-family: "helvetica-neue-lt-pro", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.3em;
+	margin: 1.1em 0;
+}
+
+
+/* =====================
+   MEDIA QUERY
+   ===================== */
+
+@media screen and (min-width: 60em) {
+	nav ul {
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 1.8em;
+	}
+
+	main.menu ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 3em;
+	}
+
+	main.menu ul li {
+		margin: 1em 0;
+	}
+}
