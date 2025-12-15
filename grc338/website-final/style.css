@@ -112,7 +112,7 @@ img {
 	width: 100%;
 	/*Please leave this line.*/
 	display: block;
-	margin-bottom: 3em;
+	margin-bottom: 1.8em;
 }
 
 a {
@@ -295,11 +295,6 @@ p.slogan {
 	color: #644e3b;
 	margin: 0.4em 0;
 }
-
-.about-text p:first-of-type {
-	margin-top: 0;
-}
-
 
 /* =====================
    HOME ADDRESS OVERLAY
