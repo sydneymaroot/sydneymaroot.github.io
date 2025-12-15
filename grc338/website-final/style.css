@@ -296,6 +296,14 @@ p.slogan {
 	margin: 0.4em 0;
 }
 
+.about-text p {
+  margin: 0.4em 0;
+}
+
+.about-text p:first-of-type {
+  margin-top: 0;
+}
+
 /* =====================
    HOME ADDRESS OVERLAY
    ===================== */
