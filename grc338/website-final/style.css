@@ -221,6 +221,13 @@ h1 {
 	margin-bottom: 0.5em;
 }
 
+main.menu h1{
+	text-align: left !important;
+	justify-self: start;
+	margin-left: 0;
+	margin-right: 0;
+}
+
 h2,
 h3,
 h4 {
